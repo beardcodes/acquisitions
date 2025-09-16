@@ -1,0 +1,59 @@
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Signup error formatValidationError is not defined","service":"acquisitions-api","stack":"ReferenceError: formatValidationError is not defined\n    at signup (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:11:26)\n    at Layer.handleRequest (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/lib/layer.js:152:17)\n    at next (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/lib/route.js:117:3)\n    at handle (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/lib/layer.js:152:17)\n    at /Users/beardnetworks/Desktop/acquisitions/node_modules/router/index.js:295:15\n    at processParams (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/index.js:582:12)\n    at next (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/index.js:291:5)\n    at router.handle (/Users/beardnetworks/Desktop/acquisitions/node_modules/router/index.js:186:3)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"User registreed successfully: contact@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"User test@example.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registreed successfully: test@example.com","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"User test@example.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signed in successfully: test@example.com","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:66:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"error","message":"Error authenticating user: Error: Invalid credentials","service":"acquisitions-api"}
+{"level":"error","message":"Signin error Invalid credentials","service":"acquisitions-api","stack":"Error: Invalid credentials\n    at authenticateUser (file:///Users/beardnetworks/Desktop/acquisitions/src/services/auth.service.js:72:13)\n    at async signin (file:///Users/beardnetworks/Desktop/acquisitions/src/controllers/auth.controller.js:60:22)"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"combine","service":"acquisitions-api"}
