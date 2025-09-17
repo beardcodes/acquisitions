@@ -1,4 +1,4 @@
-import logger from "#config/logger.js";
+import logger from '#config/logger.js';
 import bcrypt from 'bcrypt';
 import { eq } from 'drizzle-orm';
 import { db } from '#config/database.js';
@@ -54,33 +54,34 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
   }
 };
 
-export const authenticateUser = async (email, password) => {
+export const authenticateUser = async ({ email, password }) => {
   try {
-    const [user] = await db
+    const [existingUser] = await db
       .select()
       .from(users)
       .where(eq(users.email, email))
       .limit(1);
 
-    if (!user) {
-      throw new Error('Invalid credentials');
+    if (!existingUser) {
+      throw new Error('User not found');
     }
 
-    const isPasswordValid = await comparePassword(password, user.password);
-    
+    const isPasswordValid = await comparePassword(
+      password,
+      existingUser.password
+    );
+
     if (!isPasswordValid) {
-      throw new Error('Invalid credentials');
+      throw new Error('Invalid password');
     }
 
-    logger.info(`User ${user.email} authenticated successfully`);
-    
-    // Return user without password
+    logger.info(`User ${existingUser.email} authenticated successfully`);
     return {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      role: user.role,
-      created_at: user.created_at,
+      id: existingUser.id,
+      name: existingUser.name,
+      email: existingUser.email,
+      role: existingUser.role,
+      created_at: existingUser.created_at,
     };
   } catch (e) {
     logger.error(`Error authenticating user: ${e}`);
