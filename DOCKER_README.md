@@ -25,6 +25,7 @@ This guide explains how to run the Acquisitions API using Docker with both devel
 ### Development (with Neon Local)
 
 1. **Clone and setup environment:**
+
    ```bash
    git clone <your-repo>
    cd acquisitions
@@ -32,6 +33,7 @@ This guide explains how to run the Acquisitions API using Docker with both devel
    ```
 
 2. **Configure Neon credentials in `.env`:**
+
    ```bash
    # Edit .env file with your Neon credentials
    NEON_API_KEY=your-neon-api-key
@@ -41,6 +43,7 @@ This guide explains how to run the Acquisitions API using Docker with both devel
    ```
 
 3. **Start the development stack:**
+
    ```bash
    docker-compose -f docker-compose.dev.yml up --build
    ```
@@ -52,11 +55,13 @@ This guide explains how to run the Acquisitions API using Docker with both devel
 ### Production
 
 1. **Setup production environment:**
+
    ```bash
    cp .env.production .env
    ```
 
 2. **Configure production variables:**
+
    ```bash
    export DATABASE_URL="postgres://your-username:your-password@your-endpoint.neon.tech:5432/your-database?sslmode=require"
    export JWT_TOKEN="your-strong-jwt-secret"
@@ -241,25 +246,28 @@ DATABASE_URL="your-prod-url" npm run db:migrate
 ### Common Issues
 
 1. **Neon Local fails to start:**
+
    ```bash
    # Check API credentials
    echo $NEON_API_KEY
    echo $NEON_PROJECT_ID
-   
+
    # Check Neon Local logs
    docker-compose -f docker-compose.dev.yml logs neon-local
    ```
 
 2. **App can't connect to database:**
+
    ```bash
    # Verify network connectivity
    docker exec acquisitions-app-dev ping neon-local
-   
+
    # Check database health
    docker exec acquisitions-neon-local pg_isready -U neon
    ```
 
 3. **Permission errors in production:**
+
    ```bash
    # Check container permissions
    docker exec acquisitions-app-prod whoami
@@ -325,11 +333,13 @@ acquisitions/
 ### Container Communication
 
 **Development:**
+
 - App container → Neon Local container → Neon Cloud
 - Port 3000: Application API
 - Port 5432: PostgreSQL proxy
 
 **Production:**
+
 - App container → Neon Cloud (direct)
 - Port 3000: Application API
 - Optional: Port 80/443 via Nginx
@@ -337,11 +347,13 @@ acquisitions/
 ### Security Features
 
 **Development:**
+
 - Isolated network
 - Ephemeral data (auto-cleanup)
 - Local SSL certificates
 
 **Production:**
+
 - Read-only root filesystem
 - Dropped Linux capabilities
 - Resource limits
@@ -351,6 +363,7 @@ acquisitions/
 ### Monitoring & Health Checks
 
 Both environments include:
+
 - Application health checks (`/health` endpoint)
 - Database connectivity checks
 - Automatic restart on failure

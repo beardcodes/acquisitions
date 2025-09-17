@@ -5,6 +5,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 ## Development Commands
 
 ### Core Development
+
 ```bash
 # Start development server with auto-restart
 npm run dev
@@ -23,6 +24,7 @@ npm run format:check
 ```
 
 ### Database Operations
+
 ```bash
 # Generate new database migration files
 npm run db:generate
@@ -37,6 +39,7 @@ npm run db:studio
 ## Code Architecture
 
 ### Project Structure
+
 This is a Node.js Express API with TypeScript-style ES modules using import maps for path resolution. The architecture follows a layered MVC pattern:
 
 - **Entry Point**: `src/index.js` → loads environment → starts `src/server.js`
@@ -44,7 +47,9 @@ This is a Node.js Express API with TypeScript-style ES modules using import maps
 - **Database**: PostgreSQL with Drizzle ORM and Neon serverless driver
 
 ### Import Maps Configuration
+
 The project uses Node.js import maps (defined in `package.json`) for clean imports:
+
 - `#src/*` → `./src/*`
 - `#config/*` → `./src/config/*`
 - `#controllers/*` → `./src/controllers/*`
@@ -60,6 +65,7 @@ Always use these import aliases rather than relative paths when referencing code
 ### Layer Responsibilities
 
 **Controllers** (`src/controllers/`)
+
 - Handle HTTP request/response cycle
 - Perform input validation using Zod schemas
 - Call service layer functions
@@ -67,44 +73,52 @@ Always use these import aliases rather than relative paths when referencing code
 - Handle errors and logging
 
 **Services** (`src/services/`)
+
 - Contain business logic
 - Database operations using Drizzle ORM
 - Data transformation
 - Error handling with descriptive messages
 
 **Models** (`src/models/`)
+
 - Drizzle ORM schema definitions using `pgTable`
 - Database table structure and relationships
 - Currently implements: `users` table with authentication fields
 
 **Routes** (`src/routes/`)
+
 - Express router definitions
 - HTTP method and path mappings
 - Route-level middleware attachment
 
 **Validations** (`src/validations/`)
+
 - Zod schemas for request validation
 - Input sanitization and transformation
 - Currently implements: authentication schemas (`signupSchema`, `signInSchema`)
 
 **Utils** (`src/utils/`)
+
 - JWT token utilities (`jwt.js`)
 - Cookie management utilities (`cookies.js`)
 - Error formatting utilities (`format.js`)
 
 ### Database Layer
+
 - **ORM**: Drizzle with PostgreSQL dialect
 - **Driver**: Neon serverless for production
 - **Migrations**: Stored in `./drizzle/` directory
 - **Configuration**: `drizzle.config.js` defines schema location and credentials
 
 ### Authentication Architecture
+
 - JWT-based authentication with HTTP-only cookies
 - Password hashing using bcrypt (salt rounds: 10)
 - Role-based access control (roles: 'user', 'admin')
 - Cookie configuration includes security flags based on environment
 
 ### Logging
+
 - Winston logger with JSON format
 - Separate error and combined log files in `logs/` directory
 - Console logging in non-production environments
@@ -113,6 +127,7 @@ Always use these import aliases rather than relative paths when referencing code
 ## Code Standards
 
 ### ESLint Rules (Key Configurations)
+
 - **Indentation**: 2 spaces with switch case indentation
 - **Quotes**: Single quotes required
 - **Semicolons**: Required
@@ -121,6 +136,7 @@ Always use these import aliases rather than relative paths when referencing code
 - **Modern JS**: Prefer const/let over var, arrow functions, object shorthand
 
 ### Prettier Configuration
+
 - Single quotes
 - Semicolons required
 - 2-space indentation
@@ -131,6 +147,7 @@ Always use these import aliases rather than relative paths when referencing code
 ## Environment Variables
 
 Required environment variables (defined in `.env`):
+
 - `DATABASE_URL` - PostgreSQL connection string
 - `JWT_TOKEN` - JWT signing secret
 - `PORT` - Server port (defaults to 3000)
@@ -140,6 +157,7 @@ Required environment variables (defined in `.env`):
 ## Testing
 
 The ESLint config includes Jest/testing globals but no test files exist yet. When implementing tests:
+
 - Use Jest as the testing framework (globals already configured)
 - Place tests in `tests/**/*.js` files
 - Test files automatically get Jest globals (describe, it, expect, etc.)
@@ -147,6 +165,7 @@ The ESLint config includes Jest/testing globals but no test files exist yet. Whe
 ## Current Implementation Status
 
 ### Completed Features
+
 - User registration with validation
 - JWT token generation and cookie management
 - Database models and migrations for users
@@ -155,11 +174,13 @@ The ESLint config includes Jest/testing globals but no test files exist yet. Whe
 - Input validation with Zod
 
 ### Incomplete Features
+
 - Sign-in and sign-out endpoints (stubs exist in auth.routes.js)
 - Authentication middleware for protected routes
 - Password comparison functionality
 - Cookie management integration (imported but not used in controllers)
 
 ### Known Issues
+
 - `auth.controller.js` line 27: References undefined `cookie` variable (should be `cookies` from utils)
 - `auth.service.js` line 1: Incorrect import path (`#src/config/logger.js` should be `#config/logger.js`)

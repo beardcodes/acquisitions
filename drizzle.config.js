@@ -1,4 +1,4 @@
-import 'dotenv/config'; 
+import 'dotenv/config';
 
 export default {
   schema: './src/models/*.js',
@@ -6,6 +6,5 @@ export default {
   dialect: 'postgresql',
   dbCredentials: {
     url: process.env.DATABASE_URL,
-  }
+  },
 };
-
